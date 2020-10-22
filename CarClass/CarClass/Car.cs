@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Net.Security;
 using System.Text;
 
 namespace CarClass
@@ -25,7 +26,7 @@ namespace CarClass
             Color = "blue";
             MaximumOccupancy = 4;
             FuelEfficiency = 0.7;
-            Counter = new Odometer(40);
+            Counter = new Odometer(999990);
             Tank = new FuelTank(40);
         }
 
@@ -55,8 +56,8 @@ namespace CarClass
 
         public override string ToString()
         {
-            double result = 0.00;
-            return $"A {Color} {Make} {Model} with {Counter} on the odometer, that has enough fuel to travel {result}";
+            double result = Math.Round((Tank.Level/FuelEfficiency),2);
+            return $"A {Color} {Make} {Model} with {Counter.Counter} on the odometer, that has enough fuel to travel {result}KM.";
         }
 
     }
