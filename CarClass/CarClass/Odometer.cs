@@ -6,8 +6,8 @@ namespace CarClass
 {
     class Odometer
     {
-        private int _counter;
-        public int Counter 
+        private double _counter;
+        public double Counter 
         {
             get
             {
@@ -15,18 +15,30 @@ namespace CarClass
             }
             set
             {
-                _counter = value;
+                if(value > 999999)
+                {
+                    _counter = value - 999999;
+                }
+                else 
+                {
+                    _counter = value;
+                }
             }
         }
+        // Default constructor
+        public Odometer()
+        {
+            Counter = 0;
+        }
 
-        public Odometer(int counter)
+        public Odometer(double counter)
         {
             Counter = counter;
         }
 
-        public void Increment(amount)
+        public void Increment(double amount)
         {
-
+            Counter += amount;
         }
     }
 }
