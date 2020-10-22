@@ -24,7 +24,7 @@ namespace CarClass
             Model = "Camry";
             Color = "blue";
             MaximumOccupancy = 4;
-            FuelEfficiency = 4.25;
+            FuelEfficiency = 0.7;
             Counter = new Odometer(40);
             Tank = new FuelTank(40);
         }
@@ -41,10 +41,10 @@ namespace CarClass
         }
 
         // Methods
-        public void Drive()
+        public void Drive() // I'm assuming the car is driven 5km
         {
-            Tank.BurnFuel(1);
-            Counter.Increment(1);
+            Tank.BurnFuel(5);
+            Counter.Increment(5);
         }
 
         public void Drive(double km)

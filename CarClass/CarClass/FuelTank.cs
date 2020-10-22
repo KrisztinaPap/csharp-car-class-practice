@@ -68,13 +68,13 @@ namespace CarClass
 
         public double BurnFuel(double litres)
         {
-            Level = Level - litres;
+            Level = Math.Round((Level - litres),2);
             return Level;
         }
 
         public double Fill(double litres)
         {
-            Level = Level + litres;
+            Level = Math.Round((Level + litres),2);
             return Level;
         }
     }
