@@ -28,12 +28,12 @@ namespace CarClass
             }
             set
             {
-                if( value > Capacity )
+                if (value > Capacity)
                 {
                     Console.WriteLine("Level cannot go above capacity!");
                     _level = Capacity;
                 }
-                else if( value < 0 )
+                else if (value < 0)
                 {
                     throw new Exception("Level cannot go below 0 litres!");
                 }
@@ -46,12 +46,18 @@ namespace CarClass
                     catch (Exception e)
                     {
                         Console.WriteLine($"Error: {e.Message}");
-                    }  
+                    }
                 }
             }
         }
 
         // Constructors
+        public FuelTank(double litres)
+        {
+            Capacity = 50;
+            Level = litres;
+        }
+
         public FuelTank()
         {
             Capacity = 50;
@@ -60,14 +66,16 @@ namespace CarClass
 
         // Methods
 
-        public void BurnFuel(double litres)
+        public double BurnFuel(double litres)
         {
             Level = Level - litres;
+            return Level;
         }
 
-        public void Fill(double litres)
+        public double Fill(double litres)
         {
             Level = Level + litres;
+            return Level;
         }
     }
 }

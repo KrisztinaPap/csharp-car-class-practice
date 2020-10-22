@@ -25,8 +25,8 @@ namespace CarClass
             Color = "blue";
             MaximumOccupancy = 4;
             FuelEfficiency = 4.25;
-            Counter = 5000;
-            tank = 45;
+            Counter = new Odometer(40);
+            Tank = new FuelTank(40);
         }
 
         public Car(string make, string model, string color, int maximumOccupancy, double fuelEfficiency, Odometer counter, FuelTank tank)
@@ -37,18 +37,20 @@ namespace CarClass
             MaximumOccupancy = maximumOccupancy;
             FuelEfficiency = fuelEfficiency;
             Counter = counter;
-            tank = tank;
+            Tank = tank;
         }
 
         // Methods
         public void Drive()
         {
-
+            Tank.BurnFuel(1);
+            Counter.Increment(1);
         }
 
-        public void Drive(km)
+        public void Drive(double km)
         {
-
+            Tank.BurnFuel(km/FuelEfficiency);
+            Counter.Increment(km);
         }
 
         public override string ToString()

@@ -58,3 +58,4 @@ This practice is designed to help you familiarize yourself with object reference
 https://trello.com/b/NGUA7LHR/c-review-oop-practice-car-class
 
 ## References/Citations
+- Aaron Barthel helped me figure out how to properly display the object values

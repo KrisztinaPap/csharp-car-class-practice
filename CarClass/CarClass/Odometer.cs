@@ -36,9 +36,10 @@ namespace CarClass
             Counter = counter;
         }
 
-        public void Increment(double amount)
+        public double Increment(double amount)
         {
             Counter += amount;
+            return Counter;
         }
     }
 }
