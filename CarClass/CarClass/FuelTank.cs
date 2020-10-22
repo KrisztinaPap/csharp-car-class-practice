@@ -6,18 +6,7 @@ namespace CarClass
 {
     class FuelTank
     {
-        private double _capacity;
-        public double Capacity
-        {
-            get
-            {
-                return _capacity;
-            }
-            set
-            {
-                _capacity = value;
-            }
-        }
+        public double Capacity { get; private set; }
 
         private double _level;
         public double Level
