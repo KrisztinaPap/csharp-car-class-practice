@@ -25,7 +25,7 @@ namespace CarClass
             Model = "Camry";
             Color = "blue";
             MaximumOccupancy = 4;
-            FuelEfficiency = 0.7;
+            FuelEfficiency = 7;
             Counter = new Odometer(999990);
             Tank = new FuelTank(40);
         }
@@ -60,7 +60,7 @@ namespace CarClass
             // Citation: 
             // https://stackoverflow.com/questions/4325267/c-sharp-convert-int-to-string-with-padding-zeros#4325289
             string newString = Counter.Counter.ToString("000000");
-            double result = Math.Round((Tank.Level/FuelEfficiency),2);
+            double result = Math.Round((Tank.Level * FuelEfficiency),2);
             return $"A {Color} {Make} {Model} with {newString} on the odometer, that has enough fuel to travel {result}KM.";
         }
 
