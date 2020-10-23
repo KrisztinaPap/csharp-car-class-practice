@@ -56,8 +56,12 @@ namespace CarClass
 
         public override string ToString()
         {
+
+            // Citation: 
+            // https://stackoverflow.com/questions/4325267/c-sharp-convert-int-to-string-with-padding-zeros#4325289
+            string newString = Counter.Counter.ToString("000000");
             double result = Math.Round((Tank.Level/FuelEfficiency),2);
-            return $"A {Color} {Make} {Model} with {Counter.Counter} on the odometer, that has enough fuel to travel {result}KM.";
+            return $"A {Color} {Make} {Model} with {newString} on the odometer, that has enough fuel to travel {result}KM.";
         }
 
     }

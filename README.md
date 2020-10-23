@@ -1,7 +1,7 @@
 # C# OOP Practice - Car Class
 
 ## Deadline: October 23, 2020, 9am
-## Last edited: October 22, 2020
+## Last edited: October 23, 2020
 
 ## Author: Krisztina Pap
 
@@ -59,3 +59,4 @@ https://trello.com/b/NGUA7LHR/c-review-oop-practice-car-class
 
 ## References/Citations
 - Aaron Barthel helped me figure out how to properly display the object values
+- [stackoverflow: C# convert int to string with padding zeros?](https://stackoverflow.com/questions/4325267/c-sharp-convert-int-to-string-with-padding-zeros#4325289)
